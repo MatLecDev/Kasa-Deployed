@@ -21,21 +21,21 @@ node -v
 
 ## Installation
 
-1. **Clone le dépôt**
+1. **Cloner le dépôt**
 
 ```bash
 git clone https://github.com/MatLecDev/Kasa.git
 cd kasa
 ```
 
-2. **Installe les dépendances du frontend**
+2. **Installer les dépendances du frontend**
 
 ```bash
 cd frontend
 npm install
 ```
 
-3. **Installe les dépendances du backend**
+3. **Installer les dépendances du backend**
 
 ```bash
 cd ../backend
@@ -73,8 +73,8 @@ L'application sera disponible sur : `http://localhost:3001`
 ### Compte admin
 
 Le compte admin par défaut est le suivant : 
-email : admin@example.com
-password : Secret123
+- email : admin@example.com
+- password : Secret123
 
 ---
 
