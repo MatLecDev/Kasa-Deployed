@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
                 hostname: "s3-eu-west-1.amazonaws.com",
                 pathname: "/course.oc-static.com/projects/front-end-kasa-project/**",
             },
+            {
+                protocol: "https",
+                hostname: "kasa-deployed.onrender.com",
+                pathname: "/**",
+            },
         ],
     },
     experimental: {
