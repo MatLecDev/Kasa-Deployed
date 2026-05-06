@@ -37,3 +37,8 @@ export async function getSessionUserId(): Promise<number | null> {
     const user = await getSessionUser();
     return user?.id ?? null;
 }
+
+export async function getSessionUserRole(): Promise<string | null> {
+    const user = await getSessionUser();
+    return user?.role ?? null;
+}

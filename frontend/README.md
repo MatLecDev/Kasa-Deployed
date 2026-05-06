@@ -73,8 +73,8 @@ L'application sera disponible sur : `http://localhost:3001`
 ### Compte admin
 
 Le compte admin par défaut est le suivant : 
-email : admin@example.com
-password : Secret123
+- email : admin@example.com
+- password : Secret123
 
 ---
 

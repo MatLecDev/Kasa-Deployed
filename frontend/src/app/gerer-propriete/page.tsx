@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import "@/styles/manageProperty.scss"
 import {uploadFile} from "@/.service/uploadsService";
-import {getSessionUserId} from "@/.service/sessionService";
+import {getSessionUserId, getSessionUserRole} from "@/.service/sessionService";
 import {addProperty} from "@/.service/propertiesService";
 import {useRouter} from "next/navigation";
 import sanitize from "@/lib/sanitize";
@@ -58,6 +58,21 @@ export default function ManageProperty(){
     ]
 
     const router = useRouter();
+
+    /**
+     * Vérifie le rôle de l'utilisateur connecté au montage du composant.
+     * Redirige vers l'accueil si le rôle est "client" ou si l'utilisateur n'est pas connecté.
+     */
+    useEffect(() => {
+        const checkRole = async () => {
+            const role = await getSessionUserRole();
+            if (role !== "owner" && role !== "admin") {
+                router.push("/");
+            }
+        };
+
+        checkRole();
+    }, []);
 
     /**
      * Coche ou décoche un équipement dans la liste des équipements sélectionnés.

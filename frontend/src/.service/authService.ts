@@ -20,7 +20,8 @@ export async function register(name: string, email: string, password: string) {
     const body = {
         name: name,
         email: email,
-        password: password
+        password: password,
+        role: "owner"
     };
     const data = await fetchService(false, "/auth/register", "POST", body);
     if (data) {

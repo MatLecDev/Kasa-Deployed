@@ -54,12 +54,12 @@ describe("When a property card is created,", () => {
     beforeEach(() => jest.clearAllMocks());
 
     describe("and the favorite button is displayed, ", () => {
-        it("SHOULD be gray is isLiked is false", () => {
+        it("SHOULD be gray if isLiked is false", () => {
             render(<FavoriteButton propertyId={PROPERTY_ID} isLiked={false} />);
             expect(getIcon().getAttribute("src")).toBe("/icons/favorite-gray.svg");
         });
 
-        it("SHOULD be red is isLiked is true", () => {
+        it("SHOULD be red if isLiked is true", () => {
             render(<FavoriteButton propertyId={PROPERTY_ID} isLiked={true} />);
             expect(getIcon().getAttribute("src")).toBe("/icons/favorite-red.svg");
         });
